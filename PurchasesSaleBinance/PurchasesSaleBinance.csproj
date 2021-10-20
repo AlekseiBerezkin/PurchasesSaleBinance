@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="devexpress.wpf.core" Version="21.1.4" />
+    <PackageReference Include="devexpress.wpf.layoutcontrol" Version="21.1.4" />
+  </ItemGroup>
+
+</Project>
