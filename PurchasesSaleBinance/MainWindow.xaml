@@ -5,9 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PurchasesSaleBinance"
         mc:Ignorable="d"
-        Title="MainWindow" Height="607" Width="1030">
+        Title="MainWindow" Height="803" Width="1030" Loaded="Window_Loaded">
     <Grid>
-        <DataGrid Margin="10,10,313,10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <DataGrid Margin="10,10,313,0" Grid.ColumnSpan="2" Height="571" VerticalAlignment="Top">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Имя" Binding="{Binding symbol}"/>
                 <DataGridTextColumn  Header="Текущая стоимость" Binding="{Binding percent}"/>
@@ -21,23 +25,25 @@
                 <DataGridTextColumn  Header="Закрыть позицию" Binding="{Binding close}"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="btnBuy" Content="Купить" HorizontalAlignment="Right" Margin="0,10,10,0" Width="298" Height="122" VerticalAlignment="Top" FontSize="50" FontFamily="Times New Roman" FontWeight="Bold" Background="#FF29A20A" FontStyle="Normal"/>
-        <Button x:Name="btnBuy_Copy" Content="Продать" HorizontalAlignment="Right" Margin="0,137,10,0" Width="298" Height="122" VerticalAlignment="Top" FontSize="50" FontFamily="Times New Roman" FontWeight="Bold" Background="#FFF61A1A" FontStyle="Normal"/>
-        <Label Content="API key" Margin="0,0,224,37" HorizontalAlignment="Right" Width="84" Height="32" VerticalAlignment="Bottom" RenderTransformOrigin="0.481,-0.164"/>
-        <TextBox HorizontalAlignment="Right" Margin="0,0,10,10" TextWrapping="Wrap" Width="298" Height="22" VerticalAlignment="Bottom"/>
-        <Grid Margin="0,296,10,0" Background="#FFE4E4E4" HorizontalAlignment="Right" Width="298" Height="221" VerticalAlignment="Top">
+        <Button x:Name="btnBuy" Content="Купить" HorizontalAlignment="Right" Margin="0,10,10,0" Width="298" Height="122" VerticalAlignment="Top" FontSize="50" FontFamily="Times New Roman" FontWeight="Bold" Background="#FF29A20A" FontStyle="Normal" Grid.Column="1"/>
+        <Button x:Name="btnBuy_Copy" Content="Продать" HorizontalAlignment="Right" Margin="0,137,10,0" Width="298" Height="122" VerticalAlignment="Top" FontSize="50" FontFamily="Times New Roman" FontWeight="Bold" Background="#FFF61A1A" FontStyle="Normal" Grid.Column="1"/>
+        <Label Content="API key" Margin="0,0,224,233" HorizontalAlignment="Right" Width="84" Height="32" VerticalAlignment="Bottom" RenderTransformOrigin="0.481,-0.164" Grid.Column="1"/>
+        <TextBox HorizontalAlignment="Right" Margin="0,0,10,211" TextWrapping="Wrap" Width="298" Height="22" VerticalAlignment="Bottom" Grid.Column="1"/>
+        <Grid x:Name="groupParam" Margin="0,296,10,0" Background="#FFE4E4E4" HorizontalAlignment="Right" Width="298" Height="221" VerticalAlignment="Top" Grid.Column="1" RenderTransformOrigin="0.737,0.81">
             <Label Content="Фьюч" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
             <Label Content="Плечо" HorizontalAlignment="Left" Margin="159,10,0,0" VerticalAlignment="Top"/>
             <Label Content="Сумма" HorizontalAlignment="Left" Margin="10,45,0,0" VerticalAlignment="Top" Width="42"/>
-            <TextBox HorizontalAlignment="Left" Margin="57,45,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="92"/>
-            <Label Content="Стоп лос" HorizontalAlignment="Left" Margin="10,81,0,0" VerticalAlignment="Top" Width="56"/>
-            <TextBox HorizontalAlignment="Left" Margin="71,81,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="92"/>
-            <Label Content="Тейк профит" HorizontalAlignment="Left" Margin="10,127,0,0" VerticalAlignment="Top" Width="69"/>
-            <TextBox HorizontalAlignment="Left" Margin="84,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="92"/>
-            <ComboBox HorizontalAlignment="Left" Margin="57,10,0,0" VerticalAlignment="Top" Width="92"/>
-            <ComboBox HorizontalAlignment="Left" Margin="199,10,0,0" VerticalAlignment="Top" Width="92"/>
+            <TextBox x:Name="tbSumm" HorizontalAlignment="Left" Margin="57,45,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="92"/>
+            <Label x:Name="tbstopLos" Content="Стоп лос" HorizontalAlignment="Left" Margin="10,81,0,0" VerticalAlignment="Top" Width="56"/>
+            <TextBox x:Name="tbStopLos" HorizontalAlignment="Left" Margin="71,81,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="78"/>
+            <Label Content="Тейк профит" HorizontalAlignment="Left" Margin="10,108,0,0" VerticalAlignment="Top" Width="74" Height="22"/>
+            <TextBox x:Name="tbTakeProfit" HorizontalAlignment="Left" Margin="89,108,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60"/>
+            <ComboBox x:Name="cbFutures" HorizontalAlignment="Left" Margin="57,10,0,0" VerticalAlignment="Top" Width="92"/>
+            <ComboBox x:Name="cbShoulder" HorizontalAlignment="Left" Margin="199,10,0,0" VerticalAlignment="Top" Width="92"/>
+            <Button x:Name="btnApply" Content="Применить" HorizontalAlignment="Left" Margin="116,167,0,0" VerticalAlignment="Top"/>
         </Grid>
-        <Label Content="BTCUSDT" HorizontalAlignment="Right" Margin="0,254,95,0" VerticalAlignment="Top" Height="37" Width="128" FontSize="24"/>
+        <Label Content="BTCUSDT" HorizontalAlignment="Right" Margin="0,254,95,0" VerticalAlignment="Top" Height="37" Width="128" FontSize="24" Grid.Column="1"/>
+        <ListBox x:Name="listJurnal" Grid.ColumnSpan="2" Margin="10,0,10,10" Height="191" VerticalAlignment="Bottom"/>
 
     </Grid>
 </Window>
