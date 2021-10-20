@@ -10,6 +10,7 @@
     <PackageReference Include="Binance.Net" Version="7.2.5" />
     <PackageReference Include="devexpress.wpf.core" Version="21.1.4" />
     <PackageReference Include="devexpress.wpf.layoutcontrol" Version="21.1.4" />
+    <PackageReference Include="NLog" Version="4.7.11" />
   </ItemGroup>
 
   <ItemGroup>
@@ -21,6 +22,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="C:\Users\user\.nuget\packages\nlog.config\4.7.11\contentFiles\any\any\NLog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="nlog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

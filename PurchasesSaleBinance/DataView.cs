@@ -9,7 +9,7 @@ namespace PurchasesSaleBinance
        public string symbol { get; set; }
        public decimal CurrentValue { get; set; }
        public string link { get; set; }
-       public decimal futures { get; set; }
+       public string futures { get; set; }
        public decimal shoulder { get; set; }
        public decimal StopLos { get; set; }
        public decimal TakeProfit { get; set; }
