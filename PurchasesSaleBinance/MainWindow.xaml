@@ -14,21 +14,20 @@
         <DataGrid Margin="10,10,313,0" Grid.ColumnSpan="2" Height="571" VerticalAlignment="Top">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Имя" Binding="{Binding symbol}"/>
-                <DataGridTextColumn  Header="Текущая стоимость" Binding="{Binding percent}"/>
-                <DataGridTextColumn Header="Ссылка" Binding="{Binding StartPrice}"/>
-                <DataGridTextColumn  Header="Фьюч" Binding="{Binding link}"/>
+                <DataGridTextColumn  Header="Текущая стоимость" Binding="{Binding CurrentValue}"/>
+                <DataGridTextColumn Header="Ссылка" Binding="{Binding link}"/>
+                <DataGridTextColumn  Header="Фьюч" Binding="{Binding futures}"/>
                 <DataGridTextColumn  Header="Плечо" Binding="{Binding shoulder}"/>
                 <DataGridTextColumn  Header="Стоп лос" Binding="{Binding StopLos}"/>
                 <DataGridTextColumn  Header="Тейк профит" Binding="{Binding TakeProfit}"/>
                 <DataGridTextColumn  Header="PNL" Binding="{Binding PNL}"/>
-                <DataGridTextColumn  Header="Плечо" Binding="{Binding shoulder}"/>
                 <DataGridTextColumn  Header="Закрыть позицию" Binding="{Binding close}"/>
             </DataGrid.Columns>
         </DataGrid>
         <Button x:Name="btnBuy" Content="Купить" HorizontalAlignment="Right" Margin="0,10,10,0" Width="298" Height="122" VerticalAlignment="Top" FontSize="50" FontFamily="Times New Roman" FontWeight="Bold" Background="#FF29A20A" FontStyle="Normal" Grid.Column="1"/>
         <Button x:Name="btnBuy_Copy" Content="Продать" HorizontalAlignment="Right" Margin="0,137,10,0" Width="298" Height="122" VerticalAlignment="Top" FontSize="50" FontFamily="Times New Roman" FontWeight="Bold" Background="#FFF61A1A" FontStyle="Normal" Grid.Column="1"/>
         <Label Content="API key" Margin="0,0,224,233" HorizontalAlignment="Right" Width="84" Height="32" VerticalAlignment="Bottom" RenderTransformOrigin="0.481,-0.164" Grid.Column="1"/>
-        <TextBox HorizontalAlignment="Right" Margin="0,0,10,211" TextWrapping="Wrap" Width="298" Height="22" VerticalAlignment="Bottom" Grid.Column="1"/>
+        <TextBox x:Name="tbAPIkey" HorizontalAlignment="Right" Margin="0,0,10,211" TextWrapping="Wrap" Width="298" Height="22" VerticalAlignment="Bottom" Grid.Column="1"/>
         <Grid x:Name="groupParam" Margin="0,296,10,0" Background="#FFE4E4E4" HorizontalAlignment="Right" Width="298" Height="221" VerticalAlignment="Top" Grid.Column="1" RenderTransformOrigin="0.737,0.81">
             <Label Content="Фьюч" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
             <Label Content="Плечо" HorizontalAlignment="Left" Margin="159,10,0,0" VerticalAlignment="Top"/>

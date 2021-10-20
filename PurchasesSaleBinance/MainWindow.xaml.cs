@@ -24,10 +24,12 @@ namespace PurchasesSaleBinance
         {
             InitializeComponent();
         }
+        
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            
+            tbAPIkey.Text = Properties.Settings.Default.API;
+
         }
 
 
