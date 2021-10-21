@@ -26,8 +26,8 @@
         </DataGrid>
         <Button x:Name="btnBuy" Content="Купить" HorizontalAlignment="Right" Margin="0,10,10,0" Width="298" Height="122" VerticalAlignment="Top" FontSize="50" FontFamily="Times New Roman" FontWeight="Bold" Background="#FF29A20A" FontStyle="Normal" Grid.Column="1"/>
         <Button x:Name="btnBuy_Copy" Content="Продать" HorizontalAlignment="Right" Margin="0,137,10,0" Width="298" Height="122" VerticalAlignment="Top" FontSize="50" FontFamily="Times New Roman" FontWeight="Bold" Background="#FFF61A1A" FontStyle="Normal" Grid.Column="1"/>
-        <Label Content="API key" Margin="0,0,224,233" HorizontalAlignment="Right" Width="84" Height="32" VerticalAlignment="Bottom" RenderTransformOrigin="0.481,-0.164" Grid.Column="1"/>
-        <TextBox x:Name="tbAPIkey" HorizontalAlignment="Right" Margin="0,0,10,206" TextWrapping="Wrap" Width="298" Height="22" VerticalAlignment="Bottom" Grid.Column="1"/>
+        <Label Content="API key" Margin="0,0,224,254" HorizontalAlignment="Right" Width="84" Height="32" VerticalAlignment="Bottom" RenderTransformOrigin="0.481,-0.164" Grid.Column="1"/>
+        <TextBox x:Name="tbAPIkey" HorizontalAlignment="Right" Margin="0,0,10,206" TextWrapping="Wrap" Width="298" Height="48" VerticalAlignment="Bottom" Grid.Column="1"/>
         <Grid x:Name="groupParam" Margin="0,296,10,0" Background="#FFE4E4E4" HorizontalAlignment="Right" Width="298" Height="107" VerticalAlignment="Top" Grid.Column="1" RenderTransformOrigin="0.737,0.81">
             <Label Content="Фьюч" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
             <Label Content="Плечо" HorizontalAlignment="Left" Margin="159,10,0,0" VerticalAlignment="Top"/>
@@ -38,19 +38,19 @@
             <Label Content="Тейк профит" HorizontalAlignment="Left" Margin="10,72,0,0" VerticalAlignment="Top" Width="88" Height="22"/>
             <TextBox x:Name="tbTakeProfit" HorizontalAlignment="Left" Margin="98,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="51"/>
             <ComboBox x:Name="cbFutures" HorizontalAlignment="Left" Margin="57,10,0,0" VerticalAlignment="Top" Width="92"/>
-            <ComboBox x:Name="cbShoulder" HorizontalAlignment="Left" Margin="199,10,0,0" VerticalAlignment="Top" Width="92"/>
+            
             <Button x:Name="btnApply" Content="Применить" HorizontalAlignment="Left" Margin="202,78,0,0" VerticalAlignment="Top"/>
-            <ComboBox x:Name="cbShoulder_Copy" HorizontalAlignment="Left" Margin="199,10,0,0" VerticalAlignment="Top" Width="92"/>
+            <ComboBox x:Name="cbShoulder" HorizontalAlignment="Left" Margin="199,10,0,0" VerticalAlignment="Top" Width="92"/>
         </Grid>
         <Label Content="BTCUSDT" HorizontalAlignment="Right" Margin="0,254,95,0" VerticalAlignment="Top" Height="37" Width="128" FontSize="24" Grid.Column="1"/>
         <ListBox x:Name="listJurnal" Grid.ColumnSpan="2" Margin="10,596,10,0" Height="181" VerticalAlignment="Top"/>
         <Grid Grid.ColumnSpan="2" Margin="0,408,10,0" HorizontalAlignment="Right" Width="298" Height="109" VerticalAlignment="Top">
             <ComboBox x:Name="cbPair" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="120"/>
-            <Button x:Name="btnAddPair" Content="Добавить" HorizontalAlignment="Left" Margin="149,10,0,0" VerticalAlignment="Top"/>
+            <Button x:Name="btnAddPair" Content="Добавить" HorizontalAlignment="Left" Margin="149,10,0,0" VerticalAlignment="Top" Click="btnAddPair_Click"/>
             <ComboBox x:Name="cbDelPair" HorizontalAlignment="Left" Margin="10,37,0,0" VerticalAlignment="Top" Width="120"/>
-            <Button x:Name="btnDel" Content="Удалить" HorizontalAlignment="Left" Margin="149,37,0,0" VerticalAlignment="Top"/>
+            <Button x:Name="btnDel" Content="Удалить" HorizontalAlignment="Left" Margin="149,37,0,0" VerticalAlignment="Top" Click="btnDel_Click"/>
         </Grid>
-        <Button x:Name="btnReload" Content="ПЕРЕЗАГРУЗИТЬ" Grid.ColumnSpan="2" HorizontalAlignment="Left" Margin="801,522,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnReload" Content="ПЕРЕЗАГРУЗИТЬ" Grid.ColumnSpan="2" Margin="0,0,111,259" Click="btnReload_Click" Height="22" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="113"/>
 
     </Grid>
 </Window>

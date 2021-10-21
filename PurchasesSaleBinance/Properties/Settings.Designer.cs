@@ -34,5 +34,17 @@ namespace PurchasesSaleBinance.Properties {
                 this["API"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string SelectedPairs {
+            get {
+                return ((string)(this["SelectedPairs"]));
+            }
+            set {
+                this["SelectedPairs"] = value;
+            }
+        }
     }
 }
